@@ -1,0 +1,41 @@
+﻿<Window x:Class="ReportTool.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ReportTool"
+        mc:Ignorable="d"
+        Title="Report Tool" Height="500" Width="600" ResizeMode="NoResize">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="20" />
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="70" />
+                <ColumnDefinition Width="70" />
+            </Grid.ColumnDefinitions>
+            <Button Name="beatvntroll" Content="beatvn.troll" Grid.Column="0" HorizontalAlignment="Stretch" Click="BeatvnTroll_Click"/>
+            <Button Name="beatvnworld" Content="beatvn.world" Grid.Column="1" HorizontalAlignment="Stretch" Click="BeatvnWorld_Click"/>
+            <Button Name="StartReport" Content="StartReport" Grid.Column="6" HorizontalAlignment="Stretch" Click="StartReport_Click"/>
+            <Button Name="StopReport" Content="StopReport" Grid.Column="6" HorizontalAlignment="Stretch" Click="StopReport_Click" Visibility="Hidden"/>
+        </Grid>
+        <Grid
+            Grid.Row="1"
+            Name="GridWeb"
+            Loaded="Window_Loaded">
+        </Grid>
+        <TextBlock Grid.Row="2" TextWrapping="Wrap" Text="Dev by SakuraEvil"/>
+
+    </Grid>
+
+   
+</Window>
